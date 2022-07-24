@@ -79,6 +79,8 @@ def main(**kwargs):
     to be demonstrated interactively
     """
     nested_list = kwargs.get('nested_list', None)
+    if not nested_list:
+        return
     flat_list = flatten_list_from_string(nested_list)
     if flat_list == []:
         print('[]')
